@@ -65,7 +65,6 @@ whitelist:
   - ::1
   - 127.0.0.1
   - 172.69.194.15
-  - *
 # Automatically whitelist Docker host and gateway IPs
 whitelistDockerHosts: true
 # Toggle basic authentication for endpoints
@@ -113,7 +112,6 @@ enableDiscreetLogin: false
 # the username and passwords for basic auth are the same as those
 # for the individual accounts
 perUserBasicAuth: false
-
 # -- SSO LOGIN CONFIGURATION --
 sso:
   # Enable's authlia based auto login. Only enable this if you
@@ -139,7 +137,6 @@ sso:
   trustedProxies:
     - ::1
     - 127.0.0.1
-
 # Host whitelist configuration. Recommended if you're using a listen mode
 hostWhitelist:
   # Enable or disable host whitelisting
@@ -152,7 +149,6 @@ hostWhitelist:
   # - example.com
   # - .trycloudflare.com
   hosts: []
-
 # Perform whitelist checks against server-side HTTP requests that resolve to private IP addresses.
 # This is an additional layer of security to prevent Server-Side Request Forgery (SSRF) attacks.
 # Recommended when listen mode is enabled, or if your server is accessible by untrusted users.
@@ -172,7 +168,6 @@ privateAddressWhitelist:
   allowedRanges:
     - '127.0.0.0/8'      # Loopback (IPv4)
     - '::1/128'          # Loopback (IPv6)
-
 # User session timeout *in seconds* (defaults to 24 hours).
 ## Set to a positive number to expire session after a certain time of inactivity
 ## Set to 0 to expire session when the browser is closed
@@ -209,7 +204,6 @@ forwardedHeaders:
   xForwardedFor: true
   # CF-Connecting-IP header (used by Cloudflare Tunnels)
   cfConnectingIp: false
-
 ## BACKUP CONFIGURATION
 backups:
   # Allow users to create a full backup archive of their data
@@ -227,7 +221,6 @@ backups:
     maxTotalBackups: -1
     # Interval in milliseconds to throttle chat backups per user
     throttleInterval: 10000
-
 # THUMBNAILING CONFIGURATION
 thumbnails:
   # Enable thumbnail generation
@@ -241,7 +234,6 @@ thumbnails:
   quality: 95
   # Maximum thumbnail dimensions per type [width, height]
   dimensions: { 'bg': [160, 90], 'avatar': [96, 144], 'persona': [96, 144] }
-
 # PERFORMANCE-RELATED CONFIGURATION
 performance:
   # Enables lazy loading of character cards. Improves performances with large card libraries.
@@ -261,7 +253,6 @@ performance:
     maxPayloadSize: '8mb'
     # Timeout for request compression in milliseconds.
     timeout: 4000
-
 # CACHE BUSTER CONFIGURATION
 # IMPORTANT: Requires localhost or a domain with HTTPS, otherwise will not work!
 cacheBuster:
@@ -270,7 +261,6 @@ cacheBuster:
   # Only clear cache for the specified user agent regex pattern
   # Example: 'firefox|safari' (case-insensitive)
   userAgentPattern: ''
-
 # Allow secret keys exposure via API
 allowKeysExposure: false
 # Skip new default content checks
@@ -292,7 +282,6 @@ whitelistImportDomains:
 ##   headers:
 ##     User-Agent: "Googlebot/2.1 (+http://www.google.com/bot.html)"
 requestOverrides: []
-
 # EXTENSIONS CONFIGURATION
 extensions:
   # Enable UI extensions
@@ -315,7 +304,6 @@ extensions:
 # - Use "builtin" to force integrated backend
 git:
   backend: auto
-
 # Additional model tokenizers can be downloaded on demand.
 # Disabling will fallback to another locally available tokenizer.
 enableDownloadableTokenizers: true
